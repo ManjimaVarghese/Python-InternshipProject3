@@ -1,0 +1,200 @@
+
+
+.placementnavbar {
+	background-color:#374050; 
+	overflow: hidden; 
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+	position: fixed; 
+	width: 100vw; 
+	top: 0; 
+	z-index: 1000; 
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .placementnavbar ul {
+	list-style-type: none; 
+	margin: 0; 
+	padding: 0;
+	display: flex;
+	justify-content: left; 
+  }
+
+  .placementnavbar li {
+	margin: 0 10px; 
+  }
+
+  .placementnavbar a {
+	display: block; 
+	color: #f2f2f2; 
+	text-align: left;
+	padding: 14px 20px; 
+	text-decoration: none; 
+	transition: all 0.3s ease; 
+	border-radius: 5px; 
+  }
+
+  .placementnavbar a:hover {
+	background-color: #555; 
+	color: #fff; 
+  }
+
+  .placementnavbar a.active {
+	background-color: #04AA6D; 
+	color: white; 
+  }
+
+ 
+
+  .placementfooter {
+    background-color: #374050;
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 600px;
+  }
+  
+  .placementfooter-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+
+
+
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    color: #333;
+}
+
+form {
+    max-width: 600px; /* Increase the max-width to your desired value */
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #374050;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #374050;
+}
+
+
+
+
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #374050;
+    color: #fff;
+}
+
+.action-links a {
+    display: inline-block;
+    margin-right: 10px;
+    text-decoration: none;
+    padding: 6px 12px;
+    background-color: #374050;
+    color: #fff;
+    border-radius: 4px;
+}
+
+
+
+
+.feesnavbar {
+	background-color:#374050; 
+	overflow: hidden; 
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+	position: fixed; 
+	width: 100vw; 
+	top: 0; 
+	z-index: 1000; 
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .feesnavbar ul {
+	list-style-type: none; 
+	margin: 0; 
+	padding: 0;
+	display: flex;
+	justify-content: left; 
+  }
+
+  .feesnavbar li {
+	margin: 0 10px; 
+  }
+
+  .feesnavbar a {
+	display: block; 
+	color: #f2f2f2; 
+	text-align: left;
+	padding: 14px 20px; 
+	text-decoration: none; 
+	transition: all 0.3s ease; 
+	border-radius: 5px; 
+  }
+
+  .feesnavbar a:hover {
+	background-color: #555; 
+	color: #fff; 
+  }
+
+  .feesnavbar a.active {
+	background-color: #04AA6D; 
+	color: white; 
+  }

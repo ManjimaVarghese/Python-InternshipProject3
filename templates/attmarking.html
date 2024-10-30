@@ -1,0 +1,99 @@
+<!-- attmarking.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Marking</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            margin: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        td input {
+            margin-right: 5px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        p {
+            margin-top: 10px;
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Attendance Marking</h1>
+
+<form method="post" action="{% url 'attmarking' %}">
+    {% csrf_token %}
+    <table>
+        <thead>
+            <tr>
+                <th>Student Name</th>
+                <th>Is Present</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in students %}
+                <tr>
+                    <td>{{ student.student_name }}</td>
+                    <td>
+                        <input type="checkbox" name="student_{{ student.id }}"
+                            {% if student.is_present %}
+                                checked
+                            {% endif %}
+                        {% if not student.is_present %}
+                            0
+                        {% endif %}>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <button type="submit">Submit Attendance</button>
+</form>
+
+{% if msg %}
+    <p>{{ msg }}</p>
+{% endif %}
+
+</body>
+</html>

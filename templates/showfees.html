@@ -1,0 +1,55 @@
+
+
+
+
+{% extends 'feesbase.html' %}
+
+{% block title %}PlacementHome{% endblock %}
+
+{% block content %}
+
+<div style="margin-top: 100px;">
+    <div class="container">
+        <h1>FEE DETAILS </h1>
+        <table>
+            <thead>
+                <tr>
+                    
+                    <th>Department</th>
+                    <th>Student Name</th>
+                    
+                    <th>year</th>
+                    <th>Fees</th>
+                    <th colspan="2">Actions</th>
+                    
+
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in data %}
+                    <tr>
+                       
+                        <td>{{ item.department_name }}</td>
+                        <td>{{ item.student_name }}</td>
+                        
+                        <td>{{ item.year }}</td>
+                        <td>{{ item.fees }}</td>
+                        
+                        
+                        <td class="action-links">
+                
+                            <a href="{% url 'feesupdate' pk=item.pk %}">Update</a>
+
+                        </td>
+                        <td class="action-links">
+                            <a href="{% url 'studentfeedelete' pk=item.pk %}">Delete</a>
+                        </td>
+                   
+                    </tr>
+                {% endfor %}
+                <a style="text-decoration: none;color: #374050;" href="{% url 'studentfee' %}">Add Student Fee</a>
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

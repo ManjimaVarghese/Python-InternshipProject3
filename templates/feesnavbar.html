@@ -1,0 +1,19 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Page Title</title>
+  <link type="text/css" rel="stylesheet" href="{% static 'css/style1.css' %}"/>
+</head>
+<body>
+  <div class="feesnavbar">
+    <ul>
+      <li><a href="{% url 'studentfee' %}">ADD FEES</a></li>
+      <li><a href="{% url 'showfees' %}">SHOW FEES</a></li>
+      <li><a href="{% url 'feeofficerlogout' %}">LOGOUT</a></li>
+    </ul>
+  </div>
+</body>
+</html>

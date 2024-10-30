@@ -1,0 +1,49 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    
+      <!-- <style>
+        dprop{
+            background-color: ;
+        }
+
+      </style> -->
+
+
+</head>
+
+    
+<body >
+   
+        
+         
+       
+    
+    <div style="display: flex;justify-content: center;">
+        <h2 style="text-decoration: underline; text-decoration-thickness: 1.6px;">UPLOAD PRESCRIPTION</h2>
+    </div>
+    <div style="padding: 1.5% 15% 0 15%;">
+        <form id='newone' enctype="multipart/form-data"  action=""
+  method="post" class="mb-3" style=" justify-content: center; background-color: #f2f2f2;  border: 2px solid black;">
+        <div style="padding: 60px;">
+        {% csrf_token %}
+            <div class="form-group">
+                {{ form.as_p }}
+           
+          
+            <button type="submit" class="btn btn-primary" >submit</button>
+          
+        </form>
+        
+        </div>
+        
+   
+</body>
+</html>

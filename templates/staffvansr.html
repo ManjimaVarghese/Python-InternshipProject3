@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    button {
+      background-color: lightblue;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .table-bordered {
+      border-width: 5px;
+    }
+    .table-info {
+      background-color: rgb(235, 241, 242);
+    }
+    .center-table {
+      margin: 0 auto;
+    }
+    th {
+      background-color: #337ab7;
+      color: white;
+    }
+    td {
+      text-align: center;
+    }
+    .btn-primary {
+      background-color: #337ab7;
+      border-color: #337ab7;
+    }
+    .btn-primary:hover {
+      background-color: #286090;
+      border-color: #204d74;
+    }
+    body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(214, 229, 234); /* Light gray background */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <table class="table table-bordered table-info center-table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>studentid</th>
+            <th>answersheet</th>
+            
+            <th>upload mark</th>
+            
+         
+            
+          </tr>
+        </thead>
+        <tbody>
+          {% if datas %}
+        {% for dt in datas %}
+              <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ dt.student_id }}</td>
+                <td>
+                    {% if dt.answersheet %}
+                    <a href="{{ dt.answersheet.url }}" download>
+                    <img src="{{ dt.answersheet.url }}" alt="" style="width: 100px;height: 100px;"></a>
+                    {% else %}
+                       no image
+                    {% endif %}
+                  </td>
+                  <td><a href="{% url 'staffupmark' %}">upload mark<a></td>
+                  
+              
+
+                  
+                  
+
+              </tr>
+              {% endfor %}
+              {% endif %}
+        </tbody>
+      </table>
+    
+    </div>
+  </div>
+</div>
+</body>
+</html>

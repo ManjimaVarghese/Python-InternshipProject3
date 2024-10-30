@@ -1,0 +1,247 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+  <title>HTML Education Template</title>
+
+  <!-- Google font -->
+  <link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link type="text/css" rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+
+
+  <!-- Font Awesome Icon -->
+  <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+
+
+  <!-- Custom stlylesheet -->
+  <link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}"/>
+
+  <link type="text/css" rel="stylesheet" href="{% static 'css/style.css' %}"/>
+  <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signin Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+ 
+ 
+  <style>
+    
+  .container {
+    padding: 80px 120px;
+  }
+  footer {
+      padding: 0px 0px 0px 0px;
+      background-color: darkblue;
+      margin: 0px;
+    }
+  .person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 0.7;
+  }
+  .person:hover {
+    border-color: #f1f1f1;
+  }
+  .carousel-inner img {
+    -webkit-filter: grayscale(90%);
+    filter: grayscale(90%); /* make all photos black and white */ 
+    width: 100%;  
+     margin: auto; 
+   } 
+  .carousel-caption h3 {
+    color: lightblue;
+  }
+  @media (max-width: 600px) {
+    .carousel-caption {
+      display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+    }
+  }
+  .bg-1 {
+    background: lightblue;
+    color:darkblue;
+  }
+  .bg-1 h3 {color: darkblue;}
+  .bg-1 p {font-style: italic;}
+
+  body {
+            background-color: #E6E6FA; /* Set your desired background color here */
+        }
+  </style>
+</head>
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+  <div class="container-fluid">
+    <ul class="navbar-nav">
+      
+      <li class="nav-item">
+        <a class="nav-link active" href="{% url  'staff_changepassword'  %}"> </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="{% url 'studsignout' %}">Sign Out</a>
+      </li>
+      <li class="nav-item">
+         
+        </li>
+    </ul>
+  </div>
+  </nav>
+<body>
+
+
+<!-- About -->
+<div id="about" class="section">
+
+    <!-- container -->
+    <div class="container">
+
+        <!-- row -->
+        <div class="row">
+
+            <div class="col-md-6">
+                <div class="section-header">
+                    <h2>Welcome to student section</h2>
+                    <p class="lead"></p>
+                </div>
+
+                <!-- feature -->
+               
+                <!-- /feature -->
+
+                <!-- feature -->
+                <div class="feature">
+                    <i class="feature-icon fa fa-flask"></i>
+                    <div class="feature-content">
+                      <a href="{% url 'stud_feedback' %}"><h4>Send Feedback</h4></a>
+                        <p>students can send their feedback here</p>
+                    </div>
+                </div>
+                <!-- /feature -->
+
+                <!-- feature -->
+                <div class="feature">
+                    <i class="feature-icon fa fa-comments"></i>
+                    <div class="feature-content">
+                      <a href="{% url 'apply_leave' %}"><h4>student Apply Leave</h4></a>
+                        <p>You can apply for leave here by mentioning the period of time by date</p>
+                    </div>
+                </div>
+
+                <div class="feature">
+                    <i class="feature-icon fa fa-comments"></i>
+                    <div class="feature-content">
+                      <a href="{% url 'studvstatus' %}"><h4>view status of leave</h4></a>
+                        <p>You can apply for leave here by mentioning the period of time by date</p>
+                    </div>
+                </div> 
+                <div class="feature">
+                  <i class="feature-icon fa fa-comments"></i>
+                  <div class="feature-content">
+                    <a href="{% url 'studvsyllabus' %}"><h4>view sylabus based on your department</h4></a>
+                      <p>You can apply for leave here by mentioning the period of time by date</p>
+                  </div>
+              </div> 
+              <div class="feature">
+                <i class="feature-icon fa fa-comments"></i>
+                <div class="feature-content">
+                  <a href="{% url 'studvqs' %}"><h4>view qs and upload answers</h4></a>
+                    <p>You can apply for leave here by mentioning the period of time by date</p>
+                </div>
+            </div> 
+            <div class="feature">
+              <i class="feature-icon fa fa-comments"></i>
+              <div class="feature-content">
+                <a href="{% url 'studvmark' %}"><h4>view mark</h4></a>
+                  <p>You can apply for leave here by mentioning the period of time by date</p>
+              </div>
+          </div> 
+                <div class="feature">
+                    <i class="feature-icon fa fa-comments"></i>
+                    <div class="feature-content">
+                      <a href="{% url 'studviewevents' %}"><h4>View events</h4></a>
+                        <p>You can apply for leave here by mentioning the period of time by date</p>
+                    </div>
+                </div> 
+               
+                <div class="feature">
+                    <i class="feature-icon fa fa-comments"></i>
+                    <div class="feature-content">
+                      <a href="{% url 'studentfeemanagement' %}"><h4>View fee and payment applications</h4></a>
+                        <p>You can apply for leave here by mentioning the period of time by date</p>
+                    </div>
+                </div> 
+                <!-- /feature -->
+
+            </div>
+
+            <div class="col-md-6">
+                <div class="about-img">
+                    <img src="{% static 'img/about.png' %}" alt="">
+                </div>
+            </div>
+
+        </div>
+        <!-- row -->
+
+    </div>
+    <!-- container -->
+</div>
+<!-- /About -->
+  
+
+ 
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

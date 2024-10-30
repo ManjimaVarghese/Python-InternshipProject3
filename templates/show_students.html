@@ -1,0 +1,60 @@
+
+
+{% extends 'placementbase.html' %}
+
+{% block title %}PlacementHome{% endblock %}
+
+{% block content %}
+
+<div style="margin-top: 100px;">
+    <div class="container">
+        <h1> STUDENT DETAILS </h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Student Image</th>
+                    <th>Company Name</th>
+                    <th>Location</th>
+                    
+                    <th>Industry</th>
+                    <th>Salary</th>
+                    <th colspan="2">Actions</th>
+                    
+
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in data %}
+                    <tr>
+                       <td> {% if item.student_image %}
+                 
+                    <img src="{{ item.student_image.url }}" style="width: 100%; height: auto;">
+                
+            {% endif %}
+        </td>
+                        <td>{{ item.company_name }}</td>
+                        <td>{{ item.student_name }}</td>
+                        
+                        <td>{{ item.department_name }}</td>
+                        <td>{{ item.salary }}</td>
+                        
+                        
+                        <td class="action-links">
+                
+                            <a href="{% url 'student_update' pk=item.pk %}">Update</a>
+
+                        </td>
+                        <td class="action-links">
+                            <a href="{% url 'student_delete' pk=item.pk %}">Delete</a>
+                        </td>
+                   
+                    </tr>
+                {% endfor %}
+                <a style="text-decoration: none;color: #374050;" href="{% url 'add_student' %}">Add Student</a>
+            </tbody>
+        </table>
+    </div>
+
+
+</div>
+{% endblock %}

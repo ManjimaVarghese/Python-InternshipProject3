@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block title %}Placements{% endblock %}
+
+{% block content %}
+<h1 class="text-center"> Placement Students</h1>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+    
+
+    {% for student in stud %}
+    <div style="
+        background-color: rgba(118,124,135,1);
+        margin: 10px;
+        padding: 10px;
+        box-sizing: border-box;
+        text-align: center;
+        border: 1px solid #1c1a1a;
+        max-width: 300px;
+        border-radius: 5px;
+    ">
+        {% if student.student_image %}
+        <img src="{{ student.student_image.url }}" style="width: 55%; height: auto;">
+        {% endif %}
+        <h4 style="color: white;" class="mb-1">Company:{{ student.company_name }}</h4>
+        <h4 style="color: white;" class="mb-1"> Name:{{ student.student_name }} </h4>
+        <p style="color: white;" class="mb-1">Department: {{ student.department_name }} </p>
+        <p style="color: white;" class="mb-1">Salary: {{ student.salary }} </p>
+       
+    </div>
+    {% endfor %}
+</div>
+
+
+<div style="display: flex; justify-content: center; margin-top: 20px;">
+    <form action="{% url 'placementofficerlogin' %}" method="get">
+        <button type="submit" class="btn btn-primary">Officer Login</button>
+    </form>
+</div>
+
+<!-- <div style="text-align: center; margin-top: 20px;">
+  <a href="{% url 'placementcontact' %}"><h1>Contact Us</h1></a>
+     -->
+
+{% endblock %}

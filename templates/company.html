@@ -1,0 +1,19 @@
+
+{% extends 'placementbase.html' %}
+
+{% block title %}PlacementHome{% endblock %}
+
+{% block content %}
+
+<div style="margin-top: 100px;">
+
+<h2 style="padding-left: 650px;">ADD COMPANY</h2>
+
+<form method="post" action="{% url 'create_company' %}">
+{% csrf_token %}
+{{ form.as_p }}
+<button type="submit">Save</button>
+<a style="text-decoration: none;color: #374050;padding-left: 50px;" href="{% url 'showcompanies' %}">Show Companies</a>
+</form>
+</div>
+{% endblock %}

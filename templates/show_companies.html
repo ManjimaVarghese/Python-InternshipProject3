@@ -1,0 +1,51 @@
+
+
+
+{% extends 'placementbase.html' %}
+
+{% block title %}PlacementHome{% endblock %}
+
+{% block content %}
+
+<div style="margin-top: 100px;">
+
+    <div class="container">
+        <h1>COMPANY DETAILS </h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Company Name</th>
+                    <th>Location</th>
+                    
+                    <th>Industry</th>
+                    <th colspan="2">Actions</th>
+                    
+
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in data %}
+                    <tr>
+                        <td>{{ item.company_name }}</td>
+                        <td>{{ item.location }}</td>
+                        
+                        <td>{{ item.industry }}</td>
+                        
+                        
+                        <td class="action-links">
+                
+                            <a href="{% url 'company_update' pk=item.pk %}">Update</a>
+
+                        </td>
+                        <td class="action-links">
+                            <a href="{% url 'company_delete' pk=item.pk %}">Delete</a>
+                        </td>
+                   
+                    </tr>
+                {% endfor %}
+                <a style="text-decoration: none;color:#374050;" href="{% url 'create_company' %}">Add Companies</a>
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}

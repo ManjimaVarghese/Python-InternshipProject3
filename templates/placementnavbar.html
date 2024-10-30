@@ -1,0 +1,21 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Page Title</title>
+  <link type="text/css" rel="stylesheet" href="{% static 'css/style1.css' %}"/>
+</head>
+<body>
+  <div class="placementnavbar">
+    <ul>
+      <li><a href="{% url 'create_company' %}">ADD COMPANY</a></li>
+      <li><a href="{% url 'showcompanies' %}">SHOW COMPANY</a></li>
+      <li><a href="{% url 'add_student' %}">ADD STUDENTS</a></li>
+      <li><a href="{% url 'showstudents' %}">SHOW STUDENTS</a></li>
+      <li><a href="{% url 'placementofficerlogout' %}">LOGOUT</a></li>
+    </ul>
+  </div>
+</body>
+</html>

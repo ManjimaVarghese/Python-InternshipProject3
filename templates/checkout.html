@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #666;
+            margin-bottom: 10px;
+        }
+        #paypal-button-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" style="margin-top: 100px;">
+        <h1>Student Name:{{ students.student_name }}</h1>
+        <p>Department:{{ students.department_name }}</p>
+        <p>Year:{{ students.year }}</p>
+        <p>Fees: ${{ students.fees }}</p>
+
+        <!-- Link to checkout page -->
+        <div id="paypal-button-container"></div>
+    </div>
+
+    <script src="https://www.paypal.com/sdk/js?client-id=AXL0rBfVCPxzkIaeB_TOvdW-cpgcFExJzQ3ZhZYgnRoLewilutkJhGebjm1LvYvrCGbVJ8ubQSn8oufS&currency=USD"></script>
+    <script>
+        var total = '{{students.fees}}';
+
+        paypal.Buttons({
+            style:{
+                color:'blue',
+                shape:'pill',
+                label:'pay',
+                height:40
+            },
+
+            createOrder:function(data,actions){
+                return actions.order.create({
+                    purchase_units:[{
+                        amount:{
+                            value: total
+                        }
+                    }]
+                });
+            },
+            onApprove: function(data,actions){
+                return actions.order.capture().then(function(details)
+                {
+                    alert('Transaction completed by '+ details.payer.name.given_name + '!');
+                });
+            }
+        }).render('#paypal-button-container');
+    </script>
+</body>
+</html>

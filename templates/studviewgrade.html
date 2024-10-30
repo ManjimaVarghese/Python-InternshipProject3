@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    button {
+      background-color: lightblue;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .table-bordered {
+  border-width: 5px;
+}
+    .table-info{
+      background-color:rgb(235, 241, 242);
+
+}
+  </style>
+  
+</head>
+
+
+<body>
+
+  
+
+<div class="container">
+          
+    <table class="table table-bordered table-info">
+        <thead>
+          <tr>
+            <th>#</th>
+            
+            
+            <th> grade</th>
+           
+            
+            
+          </tr>
+        </thead>
+        <tbody>
+        {% if datas %}
+        {% for dt in datas %}
+          <tr>
+            
+            <td></td>
+            <td>{{dt.grade}}</td>
+           
+      
+              
+         </tr>
+         {% endfor %}
+         {% endif %}
+        </tbody>
+      </table>
+</div>
+
+</body>
+</html>
+
+
+
+</body>
+</html>

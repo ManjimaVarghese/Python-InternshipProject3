@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+    button {
+      background-color: lightblue;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .table-bordered {
+      border-width: 5px;
+    }
+    .table-info {
+      background-color: rgb(235, 241, 242);
+    }
+    .center-table {
+      margin: 0 auto;
+    }
+    th {
+      background-color: #337ab7;
+      color: white;
+    }
+    td {
+      text-align: center;
+    }
+    .btn-primary {
+      background-color: #337ab7;
+      border-color: #337ab7;
+    }
+    .btn-primary:hover {
+      background-color: #286090;
+      border-color: #204d74;
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+      <table class="table table-bordered table-info center-table">
+        <thead>
+          <tr>
+           
+            <th>mark</th>
+           
+         
+            
+          </tr>
+        </thead>
+        <tbody>
+          {% if datas %}
+        {% for dt in datas %}
+              <tr>
+             
+                
+                
+
+                  <td>{{ dt.mark }}</td>
+                
+
+              </tr>
+              {% endfor %}
+              {% endif %}
+        </tbody>
+      </table>
+    
+    </div>
+  </div>
+</div>
+</body>
+</html>

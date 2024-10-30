@@ -1,0 +1,4 @@
+/* Add this CSS rule to decrease the width of the subject_hours field */
+.custom-width {
+    width: 100px; /* Adjust the width as needed */
+}
